@@ -5,16 +5,12 @@ using namespace std;
 class Employee {
     public:
         // constructor
-        Employee(const char *name, int id) {
-            _id = id;
-            _name = new char[strlen(name) + 1];
+        Employee(const char *name, int id): _id(id), _name(new char[strlen(name) + 1]) {
             strcpy(_name, name);
         }
 
         // copy constructor
-        Employee(const Employee &rhs) {
-            _id = rhs.getId();
-            _name = new char[strlen(rhs.getName()) + 1];
+        Employee(const Employee &rhs): _id(rhs.getId()), _name(new char[strlen(rhs.getName()) + 1]) {
             strcpy(_name, rhs._name);
         }
 
