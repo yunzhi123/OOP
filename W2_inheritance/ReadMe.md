@@ -66,4 +66,4 @@ int main() {
 ```
 ### override
 - 需要注意的是在子類別 override 父類別會直接覆蓋掉該同名的 func，所以要嘛直接全部 override 要嘛用 virtual
-- 
+
